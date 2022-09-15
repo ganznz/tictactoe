@@ -166,4 +166,6 @@ body {
 .background-container > div {
   background-color: rgb(251, 251, 251);
   border-radius: 5px;
+  font-size: 0.6rem;
+  text-align: center;
 }
