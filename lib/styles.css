@@ -169,3 +169,11 @@ body {
   font-size: 0.6rem;
   text-align: center;
 }
+
+.background-container > div.green {
+  background-color: var(--green);
+}
+
+.background-container > div.red {
+  background-color: var(--red);
+}
