@@ -19,10 +19,9 @@
 
 body {
   height: 100vh;
-  background-color: grey;
 }
 
-.start-screen {
+.foreground-content {
   height: 100vh;
   display: flex;
   align-items: center;
@@ -50,6 +49,12 @@ body {
   flex-direction: column;
   align-items: center;
   margin: auto 100%;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.1));
+}
+
+.game-setup-section:hover {
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+  transition: all 0.2s;
 }
 
 .game-setup-section > button {
@@ -145,4 +150,20 @@ body {
 .board-size-text .size-value {
   width: 70px;
   text-align: center;
+}
+
+.background-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  display: grid;
+  /* grid-template: repeat(20, 50px) / repeat(20, 50px); */
+  gap: 5px;
+  overflow: hidden;
+}
+
+.background-container > div {
+  background-color: rgb(251, 251, 251);
+  border-radius: 5px;
 }
