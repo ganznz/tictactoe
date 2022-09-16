@@ -5,6 +5,8 @@
   --default-font-size: 1.3rem;
   --green: rgb(111, 238, 122);
   --red: rgb(253, 123, 123);
+  --bg-green: rgb(223, 255, 225); 
+  --bg-red: rgb(255, 238, 238);
   --orange: rgb(233, 181, 86);
   --game-setup-container-width: 700px;
 }
@@ -121,7 +123,7 @@ body {
 }
 
 .board-size-btns button {
-  color: white;
+  color: rgb(255, 255, 255);
   border: none;
   background-color: var(--orange);
   width: 75px;
@@ -156,9 +158,8 @@ body {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  z-index: -1;
+  z-index: -2;
   display: grid;
-  /* grid-template: repeat(20, 50px) / repeat(20, 50px); */
   gap: 5px;
   overflow: hidden;
 }
@@ -168,12 +169,40 @@ body {
   border-radius: 5px;
   font-size: 0.6rem;
   text-align: center;
+  transition: all 1s;
 }
 
 .background-container > div.green {
-  background-color: var(--green);
+  background-color: var(--bg-green);
+  transition: all 1s;
 }
 
 .background-container > div.red {
-  background-color: var(--red);
+  background-color: var(--bg-red);
+}
+
+.background-container > div.grey {
+  background-color: rgb(225, 225, 225);
+}
+
+.background-overlay {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0) 25%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 75%);
+  background-size: 200% 200%;
+  animation: gradient-shift 30s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0% {
+    background-position: 10% 0%;
+  }
+  50% {
+    background-position: 91% 100%;
+  }
+  100% {
+    background-position: 10% 0%;
+  }
 }
