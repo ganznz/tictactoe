@@ -5,8 +5,9 @@
   --default-font-size: 1.3rem;
   --green: rgb(111, 238, 122);
   --red: rgb(253, 123, 123);
-  --bg-green: rgb(223, 255, 225); 
-  --bg-red: rgb(255, 238, 238);
+  --bg-green: rgb(190, 255, 194); 
+  --bg-red: rgb(255, 219, 219);
+  --button-hover-red: rgb(228, 105, 105);
   --orange: rgb(233, 181, 86);
   --game-setup-container-width: 700px;
 }
@@ -63,19 +64,12 @@ body {
   width: var(--game-setup-container-width);
   border: none;
   padding: 10px 0;
+  background-color: var(--orange);
 }
 
 .game-setup-section > button:hover {
-  filter: brightness(110%);
-  transition: all 0.2s;
-}
-
-.game-setup-section > button.valid {
-  background-color: var(--green);
-}
-
-.game-setup-section > button.invalid {
-  background-color: var(--red);
+  filter: drop-shadow(0 7px 0 rgb(209, 161, 73));
+  transition: all 0.1s;
 }
 
 .game-setup-container {
@@ -86,6 +80,7 @@ body {
   height: 300px;
   width: var(--game-setup-container-width);
   border-radius: 10px 10px 0 0;
+  border: 5px solid var(--orange);
 }
 
 .game-settings {
@@ -94,7 +89,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* height: 300px; */
 }
 
 .game-settings label {
@@ -119,15 +113,16 @@ body {
 
 .gameboard-preview-container > div {
   border-radius: 15%;
-  background-color: rgb(200, 200, 200);
+  background-color: rgb(180, 180, 180);
 }
 
 .board-size-btns button {
   color: rgb(255, 255, 255);
   border: none;
-  background-color: var(--orange);
+  background-color: var(--red);
   width: 75px;
   height: 25px;
+  transition: all 0.1s ease-out
 }
 
 .board-size-btns .gb-size-up-btn {
@@ -138,8 +133,13 @@ body {
   border-radius: 0 0 5px 5px;
 }
 
-.board-size-btns .width {
+.board-size-btns .row {
   margin-right: 10px;
+}
+
+.board-size-btns > button:hover {
+  filter: drop-shadow(0 5px 0 var(--button-hover-red)) brightness(1.1);
+  transition: all 0.1s ease-out;
 }
 
 .board-size-text {
@@ -165,7 +165,7 @@ body {
 }
 
 .background-container > div {
-  background-color: rgb(251, 251, 251);
+  background-color: rgb(243, 243, 243);
   border-radius: 5px;
   font-size: 0.6rem;
   text-align: center;
@@ -190,9 +190,9 @@ body {
   height: 100vh;
   width: 100vw;
   z-index: -1;
-  background: linear-gradient(150deg, rgba(255, 255, 255, 0) 25%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 75%);
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0) 10%, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 90%);
   background-size: 200% 200%;
-  animation: gradient-shift 30s ease-in-out infinite;
+  animation: gradient-shift 20s ease-in-out infinite;
 }
 
 @keyframes gradient-shift {

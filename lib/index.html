@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
   <script src="app.js" defer></script>
   <script src="backgroundPattern.js" defer></script>
+  <script src="helperFunctions.js" type="module" defer></script>
 </head> 
 <body>
   <div class="start-screen">
@@ -26,17 +27,17 @@
             <label for="board-size-toggle">Board Size:</label>
             <div class="board-size-section">
               <div class="board-size-btns">
-                <button type="button" class="gb-size-up-btn width"><span class="material-symbols-outlined">arrow_drop_up</span></button>
-                <button type="button" class="gb-size-up-btn height"><span class="material-symbols-outlined">arrow_drop_up</span></button>
+                <button type="button" class="gb-size-up-btn row"><span class="material-symbols-outlined">arrow_drop_up</span></button>
+                <button type="button" class="gb-size-up-btn col"><span class="material-symbols-outlined">arrow_drop_up</span></button>
               </div>
               <div class="board-size-text">
-                <p class="size-value">3</p>
+                <p class="size-value rows">3</p>
                 <p>x</p>
-                <p class="size-value">3</p>
+                <p class="size-value cols">3</p>
               </div>
               <div class="board-size-btns">
-                <button type="button" class="gb-size-down-btn width"><span class="material-symbols-outlined">arrow_drop_down</span></button>
-                <button type="button" class="gb-size-down-btn height"><span class="material-symbols-outlined">arrow_drop_down</span></button>
+                <button type="button" class="gb-size-down-btn row"><span class="material-symbols-outlined">arrow_drop_down</span></button>
+                <button type="button" class="gb-size-down-btn col"><span class="material-symbols-outlined">arrow_drop_down</span></button>
               </div>
             </div>
           </div>
@@ -70,7 +71,7 @@
             </div>
           </div>
         </div>
-        <button type="button" class="invalid">PLAY</button>
+        <button type="button">PLAY</button>
       </div>
     </div>
   </div>
