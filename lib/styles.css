@@ -5,11 +5,11 @@
   --default-font-size: 1.3rem;
   --green: rgb(111, 238, 122);
   --red: rgb(253, 123, 123);
-  --bg-green: rgb(190, 255, 194); 
-  --bg-red: rgb(255, 219, 219);
+  --bg-green: rgb(177, 241, 181); 
+  --bg-red: rgb(248, 204, 204);
   --button-hover-red: rgb(228, 105, 105);
   --orange: rgb(233, 181, 86);
-  --game-setup-container-width: 700px;
+  --game-setup-container-width: 600px;
 }
 
 * {
@@ -39,12 +39,12 @@ body {
 }
 
 .game-context .title {
-  font-size: 1.3em;
+  font-size: 1.2em;
   margin-bottom: 15px
 }
 
 .game-context p {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .game-setup-section {
@@ -77,7 +77,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 300px;
+  height: calc(var(--game-setup-container-width) / 2);
   width: var(--game-setup-container-width);
   border-radius: 10px 10px 0 0;
   border: 5px solid var(--orange);
@@ -104,16 +104,16 @@ body {
 }
 
 .gameboard-preview-container {
-  width: 120px;
-  height: 120px;
+  height: 70px;
+  width: 70px;
   display: grid;
-  grid-template: repeat(5, 20px) / repeat(5, 20px);
+  grid-template: repeat(3, 20px) / repeat(3, 20px);
   gap: 5px;
 }
 
 .gameboard-preview-container > div {
   border-radius: 15%;
-  background-color: rgb(180, 180, 180);
+  background-color: rgb(170, 170, 170);
 }
 
 .board-size-btns button {
@@ -123,6 +123,10 @@ body {
   width: 75px;
   height: 25px;
   transition: all 0.1s ease-out
+}
+
+.board-size-btns button span {
+  pointer-events: none;
 }
 
 .board-size-btns .gb-size-up-btn {
