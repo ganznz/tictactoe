@@ -10,54 +10,98 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,1,0" />
   <script src="app.js" defer></script>
   <script src="backgroundPattern.js" defer></script>
-  <script src="helperFunctions.js" type="module" defer></script>
 </head> 
 <body>
-  <div class="start-screen">
-    <div class="background-container"></div>
-    <div class="background-overlay"></div>
-    <div class="foreground-content">
-      <div class="game-context">
-        <h1 class="title">TicTacToe Upgraded</h1>
-        <p>An upgrade on original Tic-Tac-Toe</p>
-      </div>
-      <div class="game-setup-section">
-        <div class="game-setup-container">
-          <div class="game-settings">
-            <label for="board-size-toggle">Board Size:</label>
-            <div class="board-size-section">
-              <div class="board-size-btns up-btns">
-                <button type="button" class="gb-size-up-btn row"><span class="material-symbols-outlined">arrow_drop_up</span></button>
-                <button type="button" class="gb-size-up-btn col"><span class="material-symbols-outlined">arrow_drop_up</span></button>
-              </div>
-              <div class="board-size-text">
-                <p class="size-value rows">3</p>
-                <p>x</p>
-                <p class="size-value cols">3</p>
-              </div>
-              <div class="board-size-btns down-btns">
-                <button type="button" class="gb-size-down-btn row"><span class="material-symbols-outlined">arrow_drop_down</span></button>
-                <button type="button" class="gb-size-down-btn col"><span class="material-symbols-outlined">arrow_drop_down</span></button>
-              </div>
+  <div class="background-container"></div>
+  <div class="background-overlay"></div>
+  <div class="start-menu-window inactive">
+    <div class="game-context">
+      <h1 class="title">TicTacToe Upgraded</h1>
+      <p>An upgrade on original Tic-Tac-Toe</p>
+    </div>
+    <div class="game-setup-section">
+      <div class="game-setup-container">
+        <div class="game-settings">
+          <label for="board-size-toggle">Board Size:</label>
+          <div class="board-size-section">
+            <div class="board-size-btns up-btns">
+              <button type="button" class="gb-size-up-btn row"><span class="material-symbols-outlined">arrow_drop_up</span></button>
+              <button type="button" class="gb-size-up-btn col"><span class="material-symbols-outlined">arrow_drop_up</span></button>
             </div>
-          </div>
-          <div class="gameboard-preview-section">
-            <div class="gameboard-preview-container">
-              <div style="background-color: rgb(250, 145, 145)"></div>
-              <div style="background-color: rgb(134, 235, 142)"></div>
-              <div style="background-color: rgb(250, 145, 145)"></div>
-              <div style="background-color: rgb(250, 145, 145)"></div>
-              <div style="background-color: rgb(134, 235, 142)"></div>
-              <div style="background-color: rgb(134, 235, 142)"></div>
-              <div style="background-color: rgb(250, 145, 145)"></div>
-              <div style="background-color: rgb(134, 235, 142)"></div>
-              <div style="background-color: rgb(250, 145, 145)"></div>
+            <div class="board-size-text">
+              <p class="size-value rows">3</p>
+              <p>x</p>
+              <p class="size-value cols">3</p>
+            </div>
+            <div class="board-size-btns down-btns">
+              <button type="button" class="gb-size-down-btn row"><span class="material-symbols-outlined">arrow_drop_down</span></button>
+              <button type="button" class="gb-size-down-btn col"><span class="material-symbols-outlined">arrow_drop_down</span></button>
             </div>
           </div>
         </div>
-        <button type="button">PLAY</button>
+        <div class="gameboard-preview-section">
+          <div class="gameboard-preview-container">
+            <div style="background-color: rgb(250, 145, 145)"></div>
+            <div style="background-color: rgb(134, 235, 142)"></div>
+            <div style="background-color: rgb(250, 145, 145)"></div>
+            <div style="background-color: rgb(250, 145, 145)"></div>
+            <div style="background-color: rgb(134, 235, 142)"></div>
+            <div style="background-color: rgb(134, 235, 142)"></div>
+            <div style="background-color: rgb(250, 145, 145)"></div>
+            <div style="background-color: rgb(134, 235, 142)"></div>
+            <div style="background-color: rgb(250, 145, 145)"></div>
+          </div>
+        </div>
+      </div>
+      <button type="button">PLAY</button>
+    </div>
+  </div>
+  <div class="game-window">
+    <div class="top-bar">
+      <button type="button">Back</button>
+      <button type="button">Mute</button>
+    </div>
+    <div class="game-window-content">
+      <div class="player-section 1">
+        <h2 class="player-name">Player 1</h2>
+        <p class="player-score">0</p>
+      </div>
+      <div class="gameboard-section">
+        <div class="gameboard-container">
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <div class="game-ended-section inactive">
+          <h1>Player 1 has won!</h1>
+          <button type="button">Play again!</button>
+          <button type="button">Menu</button>
+        </div>
+      </div>
+      <div class="player-section 2">
+        <h2 class="player-name">Player 2</h2>
+        <p class="player-score">0</p>
       </div>
     </div>
+    <footer></footer>
   </div>
 </body>
 </html>
