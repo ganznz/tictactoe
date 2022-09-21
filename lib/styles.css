@@ -185,15 +185,39 @@ body {
   border: var(--primary-window-border-size) solid var(--orange);
   gap: 40px;
   flex: 1;
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.1));
+}
+
+.game-window-content:hover {
+  filter: drop-shadow(0 0 3px rgba(0, 0, 0, 0.2));
+  transition: all 0.2s;
 }
 
 .player-section {
-  backdrop-filter: blur(3px);
   background-color: var(--light-grey);
   border-radius: 10px;
   width: 200px;
   height: 100%;
   text-align: center;
+  transition: all 0.3s;
+}
+
+.player-section.current-turn {
+  background: rgb(142, 221, 149);
+  transition: all 0.3s;
+  /* animation: plr-section-colour-change 2s ease-in-out infinite; */
+}
+
+@keyframes plr-section-colour-change {
+  0% {
+    background: rgb(142, 221, 149);
+  }
+  50% {
+    background: rgb(190, 240, 193);
+  }
+  100% {
+    background: rgb(142, 221, 149);
+  }
 }
 
 .gameboard-section {
@@ -219,6 +243,12 @@ body {
 .gameboard-container > div {
   background-color: var(--gb-cells-initial-colour);
   border-radius: 15%;
+  transition: all 0.1s;
+}
+
+.gameboard-container > div:not(.selected):hover {
+  filter: brightness(0.8);
+  transition: all 0.1s;
 }
 
 .gameboard-container.game-ended {
