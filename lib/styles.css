@@ -6,6 +6,7 @@
   --light-grey: rgb(214, 214, 214);
   --green: rgb(111, 238, 122);
   --red: rgb(253, 123, 123);
+  --selection-taken-red: rgb(153, 69, 69);
   --bg-green: rgb(177, 241, 181); 
   --bg-red: rgb(248, 204, 204);
   --button-hover-red: rgb(228, 105, 105);
@@ -203,21 +204,9 @@ body {
 }
 
 .player-section.current-turn {
-  background: rgb(142, 221, 149);
-  transition: all 0.3s;
-  /* animation: plr-section-colour-change 2s ease-in-out infinite; */
-}
-
-@keyframes plr-section-colour-change {
-  0% {
-    background: rgb(142, 221, 149);
-  }
-  50% {
-    background: rgb(190, 240, 193);
-  }
-  100% {
-    background: rgb(142, 221, 149);
-  }
+  background-color: rgb(142, 221, 149);
+  border: 5px solid rgb(171, 241, 177);
+  transition: background-color 0.3s;
 }
 
 .gameboard-section {
@@ -249,6 +238,32 @@ body {
 .gameboard-container > div:not(.selected):hover {
   filter: brightness(0.8);
   transition: all 0.1s;
+}
+
+.gameboard-container > div.selection-taken {
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-0.5px, 0, 0);
+    background-color: var(--selection-taken-red);
+  }
+  
+  20%, 80% {
+    transform: translate3d(1px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-2px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(2px, 0, 0);
+  }
 }
 
 .gameboard-container.game-ended {
