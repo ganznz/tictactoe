@@ -235,13 +235,13 @@ body {
   transition: all 0.1s;
 }
 
-.gameboard-container > div:not(.selected):hover {
+.gameboard-container > div:not(.taken):hover {
   filter: brightness(0.8);
   transition: all 0.1s;
 }
 
 .gameboard-container > div.selection-taken {
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  animation: shake 0.4s cubic-bezier(.36,.07,.19,.97) both;
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
@@ -250,7 +250,7 @@ body {
 @keyframes shake {
   10%, 90% {
     transform: translate3d(-0.5px, 0, 0);
-    background-color: var(--selection-taken-red);
+    filter: brightness(0.5);
   }
   
   20%, 80% {
