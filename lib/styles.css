@@ -11,7 +11,7 @@
   --bg-red: rgb(248, 204, 204);
   --button-hover-red: rgb(228, 105, 105);
   --orange: rgb(233, 181, 86);
-  --game-setup-container-width: 600px;
+  --game-setup-container-width: 1200px;
   --primary-window-border-size: 5px;
   --main-border-radius: 10px;
   --gb-cells-initial-colour: rgb(170, 170, 170);
@@ -78,14 +78,50 @@ body {
 }
 
 .game-setup-container {
+  width: var(--game-setup-container-width);
   background-color: white;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: calc(var(--game-setup-container-width) / 2);
-  width: var(--game-setup-container-width);
+  height: 300px;
   border-radius: var(--main-border-radius) var(--main-border-radius) 0 0;
   border: var(--primary-window-border-size) solid var(--orange);
+}
+
+.game-setup-container > *:not(.gameboard-preview-section) {
+  width: calc(var(--game-setup-container-width) / 4);
+}
+
+.player-setup {
+  padding: 30px;
+  display: flex;
+  height: 100%;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 80px;
+}
+
+.player-setup > input {
+  width: 200px;
+  text-align: center;
+}
+
+.player-setup .colour-selection {
+  display: grid;
+  grid-template: repeat(2, 40px) / repeat(4, 40px);
+  gap: 10px;
+}
+
+.player-setup .colour-selection > div {
+  border-radius: 50%;
+  transition: all 0.1s;
+}
+
+.player-setup .colour-selection > div:hover {
+  scale: 1.1;
+  transition: all 0.1s;
 }
 
 .game-settings {
@@ -119,6 +155,10 @@ body {
 .gameboard-preview-container > div {
   border-radius: 15%;
   background-color: var(--gb-cells-initial-colour);
+}
+
+.board-size-btns {
+  display: flex;
 }
 
 .board-size-btns button {
