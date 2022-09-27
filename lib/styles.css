@@ -219,6 +219,7 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .top-bar {
@@ -228,6 +229,7 @@ body {
 }
 
 .game-window-content {
+  width: 1000px;
   background-color: white;
   display: flex;
   justify-content: space-between;
