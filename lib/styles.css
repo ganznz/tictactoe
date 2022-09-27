@@ -263,8 +263,6 @@ body {
 }
 
 .player-section.current-turn {
-  background-color: rgb(142, 221, 149);
-  border: 5px solid rgb(171, 241, 177);
   transition: background-color 0.3s;
 }
 
