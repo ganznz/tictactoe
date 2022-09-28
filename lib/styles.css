@@ -385,9 +385,26 @@ body {
 }
 
 footer {
-  width: 100%;
-  height: 50px;
   background-color: var(--orange);
+  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer a {
+  text-decoration: none;
+}
+
+footer h3 {
+  font-weight: bold;
+  color: rgb(243, 222, 182);
+  letter-spacing: 1px;
+}
+
+footer span {
+  transform: translateY(2px) scale(1.2);
 }
 
 .background-container {
