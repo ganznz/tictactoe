@@ -3,7 +3,7 @@
 :root {
   --window-padding: 50px;
   --default-font-size: 1.3rem;
-  --light-grey: rgb(214, 214, 214);
+  --light-grey: rgb(226, 226, 226);
   --green: rgb(111, 238, 122);
   --red: rgb(253, 123, 123);
   --selection-taken-red: rgb(153, 69, 69);
@@ -228,6 +228,18 @@ body {
   margin: 15px var(--window-padding) 0 var(--window-padding);
 }
 
+.top-bar > button {
+  border-radius: 5px;
+  padding: 5px 30px;
+  background-color: rgb(255, 242, 217);
+  border: 3px solid var(--orange);
+}
+
+.top-bar > button:hover {
+  scale: 1.05;
+  transition: 0.1s;
+}
+
 .game-window-content {
   width: 1000px;
   background-color: white;
@@ -352,8 +364,14 @@ body {
 }
 
 .game-ended-buttons > button:first-child {
+
   background-color: var(--orange);
   border: 4px solid rgb(255, 220, 155);
+}
+
+.game-ended-buttons > button:first-child:hover {
+  filter: drop-shadow(0 4px 0 rgb(199, 162, 94));
+  transition: all 0.1s;
 }
 
 .game-ended-buttons > button:last-child {
@@ -361,7 +379,9 @@ body {
   border: 4px solid rgb(255, 164, 164)
 }
 
-.game-ended-section:not(.inactive) {
+.game-ended-buttons > button:last-child:hover {
+  filter: drop-shadow(0 4px 0 rgb(211, 93, 93));
+  transition: all 0.1s;
 }
 
 footer {
